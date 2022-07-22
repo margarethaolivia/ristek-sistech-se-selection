@@ -288,22 +288,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /* about me */
-.skill {
+.aboutme {
   padding: 0 0 50px 0;
   position: relative;
 }
-.skill-bx {
+.aboutme-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
 }
-.skill h2 {
+.aboutme h2 {
 	font-size: 45px;
 	font-weight: 700;
 }
-.skill p {
+.aboutme p {
     color: #B8B8B8;
     font-size: 18px;
     letter-spacing: 0.8px;

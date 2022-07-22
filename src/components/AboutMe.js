@@ -1,15 +1,13 @@
-import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../assets/img/color-sharp.png";
-
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 
 const AboutMe = () => {
   return (
-    <section className="skill" id="aboutme">
+    <section className="aboutme" id="aboutme">
       <Container>
-        <div className="skill-bx">
+        <div className="aboutme-bx">
           <Row>
             <Col xs={12} md={6} xl={5}>
               <img src={headerImg} alt="header img" />
