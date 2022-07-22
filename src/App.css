@@ -83,6 +83,10 @@ p.danger {
 	color: red;
 }
 
+.text-align-left {
+  text-align: left;
+}
+
 /* navbar */
 nav.navbar {
   position: fixed;
@@ -314,13 +318,72 @@ img.item {
   width: 30%;
   margin: 0 auto 15px auto;
 }
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
+
+/* project */
+.myjourney {
+  padding: 80px 0;
+  position: relative;
+  background-color: black;
 }
+.myjourney h2 {
+	font-size: 45px;
+	font-weight: 700;
+  text-align: center;
+}
+.myjourney h3 {
+  text-align: left;
+}
+.myjourney p {
+  color: #B8B8B8;
+  text-align: left;
+}
+.myjourney .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgb(255 255 255 / 10%);
+  overflow: hidden;
+}
+.myjourney .nav.nav-pills .nav-item {
+  width: 50%;
+}
+.myjourney .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+.myjourney .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+.myjourney .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+}
+.nav-link#mj-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+.nav-link#mj-tabs-tab-second {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 55px 55px 0;
+}
+
 
 /* ----------------- */
 

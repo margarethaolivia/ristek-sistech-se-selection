@@ -1,4 +1,3 @@
-import colorSharp from "../assets/img/color-sharp.png";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
@@ -39,7 +38,6 @@ const AboutMe = () => {
           </Row>
         </div>
       </Container>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   );
 };
