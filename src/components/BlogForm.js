@@ -2,7 +2,7 @@ import { Form, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const BlogForm = ({ authAxios, apiUrl, getBlogs }) => {
+const BlogForm = ({ authAxios, apiUrl, fetchBlogs }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -26,7 +26,7 @@ const BlogForm = ({ authAxios, apiUrl, getBlogs }) => {
       .then((result) => console.log(result.data))
       .catch((err) => console.log(err.message));
 
-    getBlogs();
+    fetchBlogs();
   };
 
   return (

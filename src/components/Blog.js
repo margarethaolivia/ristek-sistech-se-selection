@@ -1,14 +1,16 @@
 import { Card, Col, Button } from "react-bootstrap";
 
-const Blog = ({ title, content, like }) => {
+const Blog = ({ blog, addLike }) => {
   return (
     <>
       <Col>
         <Card>
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>{content}</Card.Text>
-            <Button variant="primary">{like}</Button>
+            <Card.Title>{blog.title}</Card.Title>
+            <Card.Text>{blog.content}</Card.Text>
+            <Button variant="primary" onClick={() => addLike(blog.id)}>
+              {blog.like}
+            </Button>
           </Card.Body>
         </Card>
       </Col>
