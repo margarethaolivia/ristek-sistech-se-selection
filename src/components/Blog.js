@@ -12,7 +12,7 @@ const Blog = ({ blog, addLike, authAxios, apiUrl, fetchBlogs }) => {
 
   const handleTitle = (e) => {
     const title = e.target.value;
-    setContent(title);
+    setTitle(title);
   };
 
   const handleContent = (e) => {
