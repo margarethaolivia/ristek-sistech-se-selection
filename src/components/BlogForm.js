@@ -25,8 +25,6 @@ const BlogForm = ({ authAxios, apiUrl, fetchBlogs }) => {
       .post(`${apiUrl}`, data)
       .then((result) => console.log(result.data))
       .catch((err) => console.log(err.message));
-
-    fetchBlogs();
   };
 
   return (
@@ -38,6 +36,7 @@ const BlogForm = ({ authAxios, apiUrl, fetchBlogs }) => {
       <Form.Control
         as="textarea"
         placeholder="Enter content"
+        rows={3}
         onChange={(e) => handleContent(e)}
       />
       <Button variant="primary" type="submit">

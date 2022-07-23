@@ -38,8 +38,6 @@ const Blogs = () => {
       .post(`${apiUrl}/like`, data)
       .then((result) => console.log(result.data))
       .catch((err) => console.log(err.message));
-
-    fetchBlogs();
   };
 
   return (
@@ -48,7 +46,16 @@ const Blogs = () => {
       <BlogForm authAxios={authAxios} apiUrl={apiUrl} fetchBlogs={fetchBlogs} />
       <Row xs={1} md={2} className="g-4">
         {blogs.map((blog) => {
-          return <Blog key={blog.id} blog={blog} addLike={addLike} />;
+          return (
+            <Blog
+              key={blog.id}
+              blog={blog}
+              addLike={addLike}
+              authAxios={authAxios}
+              apiUrl={apiUrl}
+              fetchBlogs={fetchBlogs}
+            />
+          );
         })}
       </Row>
     </section>
