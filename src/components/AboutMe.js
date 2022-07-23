@@ -1,6 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
+import aboutme from "../assets/img/aboutme.png";
+import phone from "../assets/img/iconphone.svg";
+import home from "../assets/img/iconhome.svg";
+import birthdate from "../assets/img/iconbirthdate.svg";
 
 const AboutMe = () => {
   return (
@@ -9,7 +11,7 @@ const AboutMe = () => {
         <div className="aboutme-bx">
           <Row>
             <Col xs={12} md={6} xl={5}>
-              <img src={headerImg} alt="header img" />
+              <img src={aboutme} alt="header img" />
             </Col>
             <Col xs={12} md={6} xl={7}>
               <h2>About Me</h2>
@@ -22,15 +24,15 @@ const AboutMe = () => {
               </p>
               <Row>
                 <Col xs={12} md={6} xl={4}>
-                  <img className="item" src={navIcon2} alt="" />
+                  <img className="item" src={birthdate} alt="" />
                   <p>11 April 2003</p>
                 </Col>
                 <Col xs={12} md={6} xl={4}>
-                  <img className="item" src={navIcon2} alt="" />
+                  <img className="item" src={home} alt="" />
                   <p>Bandung</p>
                 </Col>
                 <Col xs={12} md={6} xl={4}>
-                  <img className="item" src={navIcon2} alt="" />
+                  <img className="item" src={phone} alt="" />
                   <p>+62 823-3161-5557</p>
                 </Col>
               </Row>

@@ -50,7 +50,7 @@ const MyJourney = () => {
                         date="Apr 2022 - Jun 2022"
                       >
                         <h3>CS101 Teaching Assistant</h3>
-                        <p>Generation Girl Summer Club 2022</p>
+                        <p>Yayasan Generasi Maju Berkarya</p>
                       </VerticalTimelineElement>
 
                       <VerticalTimelineElement
@@ -67,21 +67,47 @@ const MyJourney = () => {
                     </VerticalTimeline>
                   </div>
                 </Tab.Pane>
-                <Tab.Pane eventKey="section">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque quam, quod neque provident velit, rem explicabo
-                    excepturi id illo molestiae blanditiis, eligendi dicta
-                    officiis asperiores delectus quasi inventore debitis quo.
-                  </p>
-                </Tab.Pane>
                 <Tab.Pane eventKey="second">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque quam, quod neque provident velit, rem explicabo
-                    excepturi id illo molestiae blanditiis, eligendi dicta
-                    officiis asperiores delectus quasi inventore debitis quo.
-                  </p>
+                  <div className="achievement">
+                    <VerticalTimeline lineColor="#fff">
+                      <VerticalTimelineElement
+                        contentStyle={{
+                          background: "#2a2a2a",
+                          color: "#fff",
+                        }}
+                        date="Mar 2022"
+                        dateClassName={"text-align-left"}
+                      >
+                        <h3>Best Staff for Web Development Division</h3>
+                        <p>Aku Masuk ITB 2022</p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        contentStyle={{
+                          background: "#2a2a2a",
+                          color: "#fff",
+                        }}
+                        date="Jun 2021"
+                      >
+                        <h3>
+                          Kode With Klossy Scholars for Web Development Camp
+                        </h3>
+                        <p>Kode With Klossy</p>
+                      </VerticalTimelineElement>
+
+                      <VerticalTimelineElement
+                        contentStyle={{
+                          background: "#2a2a2a",
+                          color: "#fff",
+                        }}
+                        date="Dec 2020"
+                        dateClassName={"text-align-left"}
+                      >
+                        <h3>Most Advance Computer Science Final Project</h3>
+                        <p>Generation Girl's Winter Club Program</p>
+                      </VerticalTimelineElement>
+                    </VerticalTimeline>
+                  </div>
                 </Tab.Pane>
               </Tab.Content>
             </Tab.Container>
