@@ -6,6 +6,8 @@ import BlogForm from "./BlogForm";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
+  const [blog, setBlog] = useState("");
+  const [like, setLike] = useState();
 
   const accessToken = "2b2ed488-bec6-40b1-8223-21841e3c40b8";
   const apiUrl = "https://sistech-api.vercel.app/blog";
@@ -24,7 +26,7 @@ const Blogs = () => {
     };
 
     getBlogs();
-  }, []);
+  }, [like, blog]);
 
   const fetchBlogs = async () => {
     const res = await authAxios.get(`${apiUrl}`);
@@ -36,7 +38,7 @@ const Blogs = () => {
 
     await authAxios
       .post(`${apiUrl}/like`, data)
-      .then((result) => console.log(result.data))
+      .then((result) => setLike(result.data.like))
       .catch((err) => console.log(err.message));
   };
 
@@ -58,7 +60,7 @@ const Blogs = () => {
                 addLike={addLike}
                 authAxios={authAxios}
                 apiUrl={apiUrl}
-                fetchBlogs={fetchBlogs}
+                setBlog={setBlog}
               />
             );
           })}
