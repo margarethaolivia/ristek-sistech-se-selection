@@ -1,4 +1,4 @@
-import { Row, Button } from "react-bootstrap";
+import { Row, Button, Container } from "react-bootstrap";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Blog from "./Blog";
@@ -42,22 +42,28 @@ const Blogs = () => {
 
   return (
     <section id="blogs" className="blogs">
-      <h2>Blogs</h2>
-      <BlogForm authAxios={authAxios} apiUrl={apiUrl} fetchBlogs={fetchBlogs} />
-      <Row xs={1} md={2} className="g-4">
-        {blogs.map((blog) => {
-          return (
-            <Blog
-              key={blog.id}
-              blog={blog}
-              addLike={addLike}
-              authAxios={authAxios}
-              apiUrl={apiUrl}
-              fetchBlogs={fetchBlogs}
-            />
-          );
-        })}
-      </Row>
+      <Container>
+        <h2 className="mb-5">Blogs</h2>
+        <BlogForm
+          authAxios={authAxios}
+          apiUrl={apiUrl}
+          fetchBlogs={fetchBlogs}
+        />
+        <Row xs={1} md={2} className="g-4 mt-4">
+          {blogs.map((blog) => {
+            return (
+              <Blog
+                key={blog.id}
+                blog={blog}
+                addLike={addLike}
+                authAxios={authAxios}
+                apiUrl={apiUrl}
+                fetchBlogs={fetchBlogs}
+              />
+            );
+          })}
+        </Row>
+      </Container>
     </section>
   );
 };

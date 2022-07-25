@@ -34,7 +34,7 @@ const Blog = ({ blog, addLike, authAxios, apiUrl, fetchBlogs }) => {
   return (
     <>
       <Col>
-        <Card>
+        <Card className="bg-dark">
           <Card.Body>
             <Card.Title>{blog.title}</Card.Title>
             <Card.Text>{blog.content}</Card.Text>
