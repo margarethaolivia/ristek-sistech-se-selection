@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, Col, Button, Form, Modal } from "react-bootstrap";
+import { Card, Row, Col, Button, Form, Modal } from "react-bootstrap";
 
 const Blog = ({ blog, addLike, authAxios, apiUrl, fetchBlogs }) => {
   const [show, setShow] = useState(false);
@@ -34,16 +34,22 @@ const Blog = ({ blog, addLike, authAxios, apiUrl, fetchBlogs }) => {
   return (
     <>
       <Col>
-        <Card className="bg-dark">
+        <Card className="shadow bg-dark">
           <Card.Body>
             <Card.Title>{blog.title}</Card.Title>
             <Card.Text>{blog.content}</Card.Text>
-            <Button variant="primary" onClick={() => addLike(blog.id)}>
-              {blog.like}
-            </Button>
-            <Button variant="primary" onClick={handleShow}>
-              Edit
-            </Button>
+            <div className="d-flex justify-content-center">
+              <Button
+                variant="primary"
+                className="m-1"
+                onClick={() => addLike(blog.id)}
+              >
+                {blog.like}
+              </Button>
+              <Button variant="primary" className="m-1" onClick={handleShow}>
+                Edit
+              </Button>
+            </div>
 
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>

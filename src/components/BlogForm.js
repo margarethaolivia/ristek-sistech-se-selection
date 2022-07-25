@@ -30,13 +30,13 @@ const BlogForm = ({ authAxios, apiUrl, fetchBlogs }) => {
   return (
     <Form onSubmit={submitBlog}>
       <Form.Control
-        className="mb-2 text-light bg-dark border-opacity-25 border-light"
+        className="shadow mb-2 text-light bg-dark border-opacity-25 border-light"
         placeholder="Enter title"
         onChange={(e) => handleTitle(e)}
       />
 
       <Form.Control
-        className="mb-2 text-light bg-dark border-opacity-25 border-light"
+        className="shadow mb-2 text-light bg-dark border-opacity-25 border-light"
         as="textarea"
         placeholder="Enter content"
         rows={3}
