@@ -7,7 +7,7 @@ import BlogForm from "./BlogForm";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [blog, setBlog] = useState("");
-  const [like, setLike] = useState();
+  const [likedBlogs, setLikedBlogs] = useState([]);
   const [alert, setAlert] = useState(false);
 
   const accessToken = "2b2ed488-bec6-40b1-8223-21841e3c40b8";
@@ -27,7 +27,7 @@ const Blogs = () => {
     };
 
     getBlogs();
-  }, [blogs, blog, like]);
+  }, [blogs, blog, likedBlogs]);
 
   const fetchBlogs = async () => {
     const res = await authAxios.get(`${apiUrl}`);
@@ -39,7 +39,7 @@ const Blogs = () => {
 
     await authAxios
       .post(`${apiUrl}/like`, data)
-      .then((result) => setLike(result.data.like))
+      .then((result) => setLikedBlogs([...likedBlogs, id]))
       .catch((err) => console.log(err.message));
   };
 
@@ -47,7 +47,7 @@ const Blogs = () => {
     <section id="blogs" className="blogs">
       <Container>
         <div
-          class={
+          className={
             alert
               ? "alert bg-success fade show d-flex justify-content-between"
               : "alert bg-success fade d-flex justify-content-between"
@@ -57,7 +57,7 @@ const Blogs = () => {
           Your blog is posted sucessfully
           <button
             type="button"
-            class="close"
+            className="close"
             data-dismiss="alert"
             aria-label="Close"
           >
@@ -79,6 +79,7 @@ const Blogs = () => {
                 authAxios={authAxios}
                 apiUrl={apiUrl}
                 setBlog={setBlog}
+                likedBlogs={likedBlogs}
               />
             );
           })}

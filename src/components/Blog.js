@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, Col, Button, Form, Modal } from "react-bootstrap";
 
-const Blog = ({ blog, addLike, authAxios, apiUrl, setBlog }) => {
+const Blog = ({ blog, addLike, authAxios, apiUrl, setBlog, likedBlogs }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -40,9 +40,11 @@ const Blog = ({ blog, addLike, authAxios, apiUrl, setBlog }) => {
             <Card.Text>{blog.content}</Card.Text>
             <div className="d-flex justify-content-center">
               <Button
-                variant="primary"
+                variant={likedBlogs.includes(blog.id) ? "info" : "primary"}
                 className="btn m-1"
-                onClick={() => addLike(blog.id)}
+                onClick={() =>
+                  !likedBlogs.includes(blog.id) && addLike(blog.id)
+                }
               >
                 {blog.like} {blog.like > 1 ? "likes" : "like"}
               </Button>
