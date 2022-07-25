@@ -2,7 +2,7 @@ import { Form, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const BlogForm = ({ authAxios, apiUrl, fetchBlogs }) => {
+const BlogForm = ({ authAxios, apiUrl, setAlert }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -18,24 +18,27 @@ const BlogForm = ({ authAxios, apiUrl, fetchBlogs }) => {
 
   const submitBlog = async (e) => {
     e.preventDefault();
+    e.target.reset();
 
     const data = { title: title, content: content };
 
     await authAxios
       .post(`${apiUrl}`, data)
-      .then((result) => console.log(result.data))
+      .then((result) => setAlert(true))
       .catch((err) => console.log(err.message));
   };
 
   return (
     <Form onSubmit={submitBlog}>
       <Form.Control
+        required
         className="shadow mb-2 text-light bg-dark border-opacity-25 border-light"
         placeholder="Enter title"
         onChange={(e) => handleTitle(e)}
       />
 
       <Form.Control
+        required
         className="shadow mb-2 text-light bg-dark border-opacity-25 border-light"
         as="textarea"
         placeholder="Enter content"

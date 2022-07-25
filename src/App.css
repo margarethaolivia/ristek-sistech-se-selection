@@ -87,8 +87,15 @@ p.danger {
   text-align: left;
 }
 
-.dark {
-  background-color: #121212;
+.alert {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* navbar */
@@ -397,8 +404,7 @@ img.item {
 /* blogs */
 .blogs {
   background: rgb(21,13,40);
-  background: linear-gradient(180deg, rgba(21,13,40,1) 0%, rgba(41,14,37,1) 100%);
-  padding: 80px 0;
+  background: linear-gradient(180deg, rgba(9,5,20,1) 0%, rgba(41,14,37,1) 100%);
 }
 
 .blogs h2 {
