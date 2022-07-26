@@ -2,7 +2,7 @@ import { Form, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const BlogForm = ({ authAxios, apiUrl, setAlert }) => {
+const BlogForm = ({ authAxios, apiUrl, setAlert, setText }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -24,7 +24,10 @@ const BlogForm = ({ authAxios, apiUrl, setAlert }) => {
 
     await authAxios
       .post(`${apiUrl}`, data)
-      .then((result) => setAlert(true))
+      .then((result) => {
+        setAlert(true);
+        setText("posted");
+      })
       .catch((err) => console.log(err.message));
   };
 

@@ -1,7 +1,16 @@
 import { useState } from "react";
 import { Card, Col, Button, Form, Modal } from "react-bootstrap";
 
-const Blog = ({ blog, addLike, authAxios, apiUrl, setBlog, likedBlogs }) => {
+const Blog = ({
+  blog,
+  addLike,
+  authAxios,
+  apiUrl,
+  setBlog,
+  likedBlogs,
+  setAlert,
+  setText,
+}) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -27,7 +36,11 @@ const Blog = ({ blog, addLike, authAxios, apiUrl, setBlog, likedBlogs }) => {
 
     await authAxios
       .put(`${apiUrl}`, data)
-      .then((result) => setBlog(result.data))
+      .then((result) => {
+        setBlog(result.data);
+        setAlert(true);
+        setText("updated");
+      })
       .catch((err) => console.log(err.message));
   };
 

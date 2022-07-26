@@ -401,10 +401,19 @@ img.item {
   border-radius: 0 55px 55px 0;
 }
 
+
+/* alert */
+.alert {
+  position: fixed !important;
+  top: 100px;
+  z-index: 10;
+}
+
 /* blogs */
 .blogs {
   background: rgb(21,13,40);
   background: linear-gradient(180deg, rgba(9,5,20,1) 0%, rgba(41,14,37,1) 100%);
+  padding: 80px;
 }
 
 .blogs h2 {

@@ -2,13 +2,15 @@ import { Row, Container } from "react-bootstrap";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Blog from "./Blog";
+import Alert from "./Alert";
 import BlogForm from "./BlogForm";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [blog, setBlog] = useState("");
-  const [likedBlogs, setLikedBlogs] = useState([]);
   const [alert, setAlert] = useState(false);
+  const [text, setText] = useState("");
+  const [likedBlogs, setLikedBlogs] = useState([]);
 
   const accessToken = "2b2ed488-bec6-40b1-8223-21841e3c40b8";
   const apiUrl = "https://sistech-api.vercel.app/blog";
@@ -46,29 +48,14 @@ const Blogs = () => {
   return (
     <section id="blogs" className="blogs">
       <Container>
-        <div
-          className={
-            alert
-              ? "alert bg-success fade show d-flex justify-content-between"
-              : "alert bg-success fade d-flex justify-content-between"
-          }
-          role="alert"
-        >
-          Your blog is posted sucessfully
-          <button
-            type="button"
-            className="close"
-            data-dismiss="alert"
-            aria-label="Close"
-          >
-            <span aria-hidden="true" onClick={() => setAlert(false)}>
-              &times;
-            </span>
-          </button>
-        </div>
-
+        <Alert alert={alert} setAlert={setAlert} text={text} />
         <h2 className="mb-5">Blogs</h2>
-        <BlogForm authAxios={authAxios} apiUrl={apiUrl} setAlert={setAlert} />
+        <BlogForm
+          authAxios={authAxios}
+          apiUrl={apiUrl}
+          setAlert={setAlert}
+          setText={setText}
+        />
         <Row xs={1} md={2} className="g-4 mt-4">
           {blogs.map((blog) => {
             return (
@@ -80,6 +67,9 @@ const Blogs = () => {
                 apiUrl={apiUrl}
                 setBlog={setBlog}
                 likedBlogs={likedBlogs}
+                alert={alert}
+                setAlert={setAlert}
+                setText={setText}
               />
             );
           })}
