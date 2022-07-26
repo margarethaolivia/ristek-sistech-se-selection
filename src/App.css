@@ -108,6 +108,13 @@ nav.navbar {
 nav.navbar.scrolled {
   background-color: #121212;
 }
+
+@media screen and (max-width: 1000px) {
+  nav.navbar {
+    background-color: #121212 !important;
+  }
+}
+
 nav.navbar a.navbar-brand {
     width: 9%;
 }
@@ -267,22 +274,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
+  margin-bottom: 30px;
 }
-.banner button {
+
+.banner a {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 30px;
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
+  text-decoration: none;
 }
-.banner button svg {
+.banner a svg {
   font-size: 25px;
   margin-left: 10px;
   line-height: 1;
 }
-.banner button:hover {
+.banner a:hover {
   margin-left: 25px;
+  cursor: pointer;
+  color: #fff;
 }
 .banner img {
   animation: updown 2s linear infinite;
@@ -405,8 +416,10 @@ img.item {
 /* alert */
 .alert {
   position: fixed !important;
-  top: 100px;
+  top: 70px;
+  left: 0;
   z-index: 10;
+  width: 100% !important;
 }
 
 /* blogs */
@@ -419,6 +432,11 @@ img.item {
 .blogs h2 {
 	font-size: 45px;
 	font-weight: 700;
+}
+
+.blogs p.no-blog {
+  margin-top: 48px;
+  font-style: italic;
 }
 
 /* footer */

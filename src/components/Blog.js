@@ -88,7 +88,7 @@ const Blog = ({
                       className="bg-dark text-light border-opacity-25 border-light"
                       as="textarea"
                       placeholder="Enter content"
-                      rows={3}
+                      rows={6}
                       value={content}
                       onChange={(e) => handleContent(e)}
                     />

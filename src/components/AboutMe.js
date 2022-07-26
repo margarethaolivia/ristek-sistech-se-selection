@@ -17,10 +17,10 @@ const AboutMe = () => {
               <h2>About Me</h2>
               <p>
                 My name is Margaretha Olivia Haryono. I am 19 years old and
-                currently a second year student at Bandung Institute of
+                currently a second-year student at Bandung Institute of
                 Technology majoring in informatics engineering. I love coding
-                and making website. I want to inspire other young women to also
-                pursue their dreams in the STEM related field.
+                and making websites. I want to inspire other young women to also
+                pursue their dreams in the STEM-related field.
               </p>
               <Row>
                 <Col xs={12} md={6} xl={4}>

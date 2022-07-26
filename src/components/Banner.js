@@ -13,9 +13,10 @@ const Banner = () => {
               An informatics student at Bandung Institute of Technology who is
               interested in software engineering and web development.
             </p>
-            <button onClick={() => console.log("connect")}>
-              Let's connect <ArrowRightCircle size={25} />
-            </button>
+            <a href="#aboutme">
+              Learn More
+              <ArrowRightCircle size={25} />
+            </a>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt="header img" />

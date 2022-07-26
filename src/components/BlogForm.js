@@ -45,7 +45,7 @@ const BlogForm = ({ authAxios, apiUrl, setAlert, setText }) => {
         className="shadow mb-2 text-light bg-dark border-opacity-25 border-light"
         as="textarea"
         placeholder="Enter content"
-        rows={3}
+        rows={4}
         onChange={(e) => handleContent(e)}
       />
       <Button variant="primary" type="submit">

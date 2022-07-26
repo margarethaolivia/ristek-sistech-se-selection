@@ -12,7 +12,7 @@ const Blogs = () => {
   const [text, setText] = useState("");
   const [likedBlogs, setLikedBlogs] = useState([]);
 
-  const accessToken = "2b2ed488-bec6-40b1-8223-21841e3c40b8";
+  const accessToken = "f4d2576b-e1c2-4dec-895e-5030174392ac";
   const apiUrl = "https://sistech-api.vercel.app/blog";
 
   const authAxios = axios.create({
@@ -47,8 +47,8 @@ const Blogs = () => {
 
   return (
     <section id="blogs" className="blogs">
+      <Alert alert={alert} setAlert={setAlert} text={text} />
       <Container>
-        <Alert alert={alert} setAlert={setAlert} text={text} />
         <h2 className="mb-5">Blogs</h2>
         <BlogForm
           authAxios={authAxios}
@@ -56,24 +56,29 @@ const Blogs = () => {
           setAlert={setAlert}
           setText={setText}
         />
-        <Row xs={1} md={2} className="g-4 mt-4">
-          {blogs.map((blog) => {
-            return (
-              <Blog
-                key={blog.id}
-                blog={blog}
-                addLike={addLike}
-                authAxios={authAxios}
-                apiUrl={apiUrl}
-                setBlog={setBlog}
-                likedBlogs={likedBlogs}
-                alert={alert}
-                setAlert={setAlert}
-                setText={setText}
-              />
-            );
-          })}
-        </Row>
+
+        {blogs.length > 0 ? (
+          <Row xs={1} md={2} className="g-4 mt-4">
+            {blogs.map((blog) => {
+              return (
+                <Blog
+                  key={blog.id}
+                  blog={blog}
+                  addLike={addLike}
+                  authAxios={authAxios}
+                  apiUrl={apiUrl}
+                  setBlog={setBlog}
+                  likedBlogs={likedBlogs}
+                  alert={alert}
+                  setAlert={setAlert}
+                  setText={setText}
+                />
+              );
+            })}
+          </Row>
+        ) : (
+          <p className="no-blog"> There is no blogs yet.</p>
+        )}
       </Container>
     </section>
   );

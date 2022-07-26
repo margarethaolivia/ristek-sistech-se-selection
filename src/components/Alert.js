@@ -3,8 +3,8 @@ const Alert = ({ alert, setAlert, text }) => {
     <div
       className={
         alert
-          ? "container alert bg-success fade show d-flex justify-content-between"
-          : "container alert bg-success fade d-flex justify-content-between"
+          ? "alert bg-success fade show d-flex justify-content-between"
+          : "alert bg-success fade d-flex justify-content-between"
       }
       role="alert"
     >
