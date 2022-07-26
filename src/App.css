@@ -421,6 +421,11 @@ img.item {
 	font-weight: 700;
 }
 
+/* footer */
+.footer {
+  background-color: #121212 !important;
+}
+
 /* ----------------- */
 
 .App {

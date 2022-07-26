@@ -5,6 +5,7 @@ import Banner from "./components/Banner";
 import AboutMe from "./components/AboutMe";
 import MyJourney from "./components/MyJourney";
 import Blogs from "./components/Blogs";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <AboutMe />
       <MyJourney />
       <Blogs />
+      <Footer />
     </div>
   );
 }
