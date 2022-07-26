@@ -25,10 +25,7 @@ Website ini berisi informasi data diri, perjalanan di bidang teknologi dalam ben
 
 ## Beberapa Screenshot Tampilan Website
 
-![Alt text](public/docs/banner.png?raw=true)
-
-![Alt text](public/docs/experience.png?raw=true)
-
-![Alt text](public/docs/blogs.png?raw=true)
-
-![Alt text](public/docs/editblog.png?raw=true)
+<img src="public/docs/banner.png" alt="banner" style="width:480px;"/>
+<img src="public/docs/experience.png" alt="experience" style="width:480px;"/>
+<img src="public/docs/blogs.png" alt="blogs" style="width:480px;"/>
+<img src="public/docs/editblog.png" alt="editblog" style="width:480px;"/>
